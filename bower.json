@@ -1,0 +1,16 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "leaflet": "^0.7.7",
+    "angular-leaflet-directive": "^0.10.0",
+    "ngCordova": "^0.1.26-alpha",
+    "leaflet-routing-machine": "^2.6.2",
+    "font-awesome": "^4.5.0",
+    "Leaflet.awesome-markers": "^2.0.2",
+    "angular-fontawesome": "^1.0.0"
+  }
+}
