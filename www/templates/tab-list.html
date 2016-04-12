@@ -1,10 +1,9 @@
 <ion-view view-title="POI List">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="marker in map.markers" type="item-text-wrap" href="#/tab/map" ng-click="moveToMarker(marker)" >
-        <fa name="medkit" size="3" ng-style="{'color': marker.icon.markerColor}"></fa>
-        <h2>{{marker.message}}</h2>
-      </ion-item>
+    <ion-item class="item-remove-animate item-icon-left " ng-repeat="marker in map.markers" type="item-text-wrap" href="#/tab/map" ng-click="moveToMarker(marker)">
+      <i class="icon ion-location"></i>
+      <h2>{{marker.message}}</h2>
+    </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

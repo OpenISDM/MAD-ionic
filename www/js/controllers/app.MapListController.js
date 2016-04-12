@@ -7,10 +7,6 @@
 
   function MapListController($scope, PoiService, GeoService, leafletData) {
 
-    // $scope.$on("$ionicView.enter", function() {
-    // $scope.moveToMarker($stateParams.markerMessage);
-    // });
-
     /**
      * init a map object for map view
      */
@@ -105,12 +101,6 @@
      * moving to marker
      */
     $scope.moveToMarker = function(marker) {
-      console.log($scope.map.markers);
-      console.log(marker);
-      console.log('userLocation ' + $scope.map.markers['userLocation'].lat);
-      console.log('userLocation ' + $scope.map.markers['userLocation'].lng);
-      console.log('marker ' + marker.lat);
-      console.log('marker ' + marker.lng);
       $scope.routingControl.getPlan().setWaypoints([
         L.latLng($scope.map.markers['userLocation'].lat, $scope.map.markers['userLocation'].lng),
         L.latLng(marker.lat, marker.lng)

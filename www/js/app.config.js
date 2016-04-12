@@ -20,7 +20,6 @@
         views: {
           'tab-map': {
             templateUrl: 'templates/tab-map.html'
-            // controller: 'MapController'
           }
         }
       })
@@ -30,20 +29,22 @@
         views: {
           'tab-list': {
             templateUrl: 'templates/tab-list.html'
-            // controller: 'ListController'
           }
         }
       })
 
-    .state('tab.setting', {
-      url: '/setting',
-      views: {
-        'tab-setting': {
-          templateUrl: 'templates/tab-setting.html',
-          controller: 'SettingsController'
-        }
-      }
-    });
+    /**
+    * To-Do
+    */
+    // .state('tab.setting', {
+    //   url: '/setting',
+    //   views: {
+    //     'tab-setting': {
+    //       templateUrl: 'templates/tab-setting.html',
+    //       controller: 'SettingsController'
+    //     }
+    //   }
+    // });
 
     $urlRouterProvider.otherwise('/tab/map');
 
