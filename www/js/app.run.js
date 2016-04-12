@@ -17,6 +17,7 @@
         StatusBar.styleDefault();
       }
     });
+
   }
 
 })();

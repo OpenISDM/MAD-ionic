@@ -5,10 +5,7 @@
     .module('MAD', [
       'ionic',
       'ngCordova',
-      'leaflet-directive'
-
-      // 'igTruncate',
-      // 'picardy.fontawesome'
+      'leaflet-directive',
+      'picardy.fontawesome'
     ]);
-
 })();

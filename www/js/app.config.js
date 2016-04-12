@@ -11,15 +11,16 @@
       .state('tab', {
       url: '/tab',
       abstract: true,
-      templateUrl: 'templates/tabs.html'
+      templateUrl: 'templates/tabs.html',
+      controller: 'MapListController'
     })
 
     .state('tab.map', {
-        url: '/map',
+        url: '/map?markerMessage',
         views: {
           'tab-map': {
-            templateUrl: 'templates/tab-map.html',
-            controller: 'MapController'
+            templateUrl: 'templates/tab-map.html'
+            // controller: 'MapController'
           }
         }
       })
@@ -28,8 +29,8 @@
         url: '/list',
         views: {
           'tab-list': {
-            templateUrl: 'templates/tab-list.html',
-            controller: 'ListController'
+            templateUrl: 'templates/tab-list.html'
+            // controller: 'ListController'
           }
         }
       })

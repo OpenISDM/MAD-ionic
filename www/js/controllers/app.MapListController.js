@@ -3,14 +3,13 @@
 
   angular
     .module('MAD')
-    .controller('MapController', MapController);
+    .controller('MapListController', MapListController);
 
-  function MapController($scope, $stateParams, PoiService, GeoService, leafletData) {
+  function MapListController($scope, PoiService, GeoService, leafletData) {
 
-    $scope.$on("$ionicView.enter", function() {
-      console.log($stateParams);
-      $scope.moveToMarker($stateParams.markerMessage);
-    });
+    // $scope.$on("$ionicView.enter", function() {
+    // $scope.moveToMarker($stateParams.markerMessage);
+    // });
 
     /**
      * init a map object for map view
@@ -110,11 +109,11 @@
       console.log(marker);
       console.log('userLocation ' + $scope.map.markers['userLocation'].lat);
       console.log('userLocation ' + $scope.map.markers['userLocation'].lng);
-      console.log('marker ' + $scope.map.markers[marker].lat);
-      console.log('marker ' + $scope.map.markers[marker].lng);
+      console.log('marker ' + marker.lat);
+      console.log('marker ' + marker.lng);
       $scope.routingControl.getPlan().setWaypoints([
         L.latLng($scope.map.markers['userLocation'].lat, $scope.map.markers['userLocation'].lng),
-        L.latLng($scope.map.markers[marker].lat, $scope.map.markers[marker].lng)
+        L.latLng(marker.lat, marker.lng)
       ]);
     };
   }
