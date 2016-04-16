@@ -27,14 +27,18 @@
       .then(function(position) {
 
         $scope.map.center = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-          zoom: 15
+          // lat: position.coords.latitude,
+          // lng: position.coords.longitude,
+          lat: 22.992909,
+          lng: 113.064301,
+          zoom: 13
         }
 
         $scope.map.markers['userLocation'] = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
+          // lat: position.coords.latitude,
+          // lng: position.coords.longitude,
+          lat: 22.992909,
+          lng: 113.064301,
           message: "You Are Here",
           focus: true,
           draggable: false,
