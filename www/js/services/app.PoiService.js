@@ -18,10 +18,8 @@
               url: 'api/poi/proximity',
               method: "GET",
               params: {
-                // lat: position.coords.latitude,
-                // lng: position.coords.longitude,
-                lat: 22.992909,
-                lng: 113.064301,
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
                 dist: 100
               }
             }

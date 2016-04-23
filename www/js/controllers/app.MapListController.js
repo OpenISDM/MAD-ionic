@@ -27,19 +27,16 @@
       .then(function(position) {
 
         $scope.map.center = {
-          // lat: position.coords.latitude,
-          // lng: position.coords.longitude,
-          lat: 22.992909,
-          lng: 113.064301,
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
           zoom: 13
         }
 
         $scope.map.markers['userLocation'] = {
-          // lat: position.coords.latitude,
-          // lng: position.coords.longitude,
-          lat: 22.992909,
-          lng: 113.064301,
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
           message: "You Are Here",
+          distance: 0,
           focus: true,
           draggable: false,
           icon: {
@@ -61,11 +58,11 @@
      */
     PoiService.getPois()
       .then(function(response) {
-
         for (var index in response.data) {
           $scope.map.markers[response.data[index].key] = {
             lat: response.data[index].latitude,
             lng: response.data[index].longitude,
+            distance: response.data[index].distance,
             focus: false,
             draggable: false,
             message: response.data[index].key,
@@ -78,6 +75,7 @@
             }
           }
         }
+        console.log($scope.map.markers)
       }, function(err) {
         console.log('getPois error: ' + angular.toJson(err));
       });

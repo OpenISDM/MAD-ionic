@@ -3,6 +3,7 @@
     <ion-item class="item-remove-animate item-icon-left " ng-repeat="marker in map.markers" type="item-text-wrap" href="#/tab/map" ng-click="moveToMarker(marker)">
       <i class="icon ion-navigate"></i>
       <h2>{{marker.message}}</h2>
+      <p>Distance:  {{marker.distance}} km</p>
     </ion-item>
     </ion-list>
   </ion-content>
