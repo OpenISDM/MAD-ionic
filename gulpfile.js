@@ -55,7 +55,7 @@ gulp.task('git-check', function(done) {
 
 gulp.task('add-proxy', function() {
   return replace({
-    regex: "hhttp://140.109.17.112:3000/api",
+    regex: "http://140.109.17.112:3000/api",
     replacement: "http://localhost:8100/api",
     paths: replaceFiles,
     recursive: false,

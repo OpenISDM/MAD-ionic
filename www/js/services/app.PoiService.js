@@ -15,7 +15,7 @@
           .then(function(position) {
 
             var options = {
-              url: 'api/poi/proximity',
+              url: 'http://140.109.17.112:3000/api/poi/proximity',
               method: "GET",
               params: {
                 lat: position.coords.latitude,
